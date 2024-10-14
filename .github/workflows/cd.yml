@@ -10,12 +10,12 @@ on:
 jobs:
   build:
     runs-on: self-hosted
-    steps:
 
-    - name: Pull Docker image 
+    steps:
+    - name: Pull Docker image
       run: sudo docker pull gunktp20/cicd-pipeline-docker:latest
     - name: Delete Old docker container
-      run: sudo docker rm -f cicd-pipeline-container || true
+      run: sudo docker rm -f cicd-pipeline-docker || true
     - name: Run Docker Container
       run: sudo docker run -d -p 3000:3000 --name cicd-pipeline-container gunktp20/cicd-pipeline-docker
 
