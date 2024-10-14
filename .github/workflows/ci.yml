@@ -43,8 +43,8 @@ jobs:
       run: echo $DOCKER_TOKEN | docker login -u $DOCKER_USERNAME --password-stdin
 
     - name: Build the Docker image
-      run: docker build -t your-dockerhub-username/your-image-name:latest .
+      run: docker build -t gunktp20/cicd-pipeline-docker:latest .
 
     - name: Push to Docker Hub
-      run: docker push your-dockerhub-username/your-image-name:latest
+      run: docker push gunktp20/cicd-pipeline-docker:latest
 
