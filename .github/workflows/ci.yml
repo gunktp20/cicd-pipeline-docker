@@ -23,7 +23,7 @@
 #     - name: Push to Dockerhub
 #       run: docker build -t cicd-pipeline-docker:latest
 
-name: Docker Image CI
+name: CI Pipeline
 
 on:
   push:
