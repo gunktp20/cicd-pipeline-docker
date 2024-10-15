@@ -15,7 +15,7 @@ jobs:
     - name: Pull Docker image
       run: sudo docker pull gunktp20/cicd-pipeline-docker:latest
     - name: Delete Old docker container
-      run: sudo docker rm -f cicd-pipeline-docker || true
+      run: sudo docker rm -f cicd-pipeline-container || true
     - name: Run Docker Container
       run: sudo docker run -d -p 3000:3000 --name cicd-pipeline-container gunktp20/cicd-pipeline-docker
 
